@@ -1,0 +1,5 @@
+{
+    "name": "node-rcon"
+  , "version": "0.0.1"
+  , "main":"node-rcon.js"
+}
