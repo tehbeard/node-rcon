@@ -1,6 +1,5 @@
 {
     "name": "node-rcon"
-  , "version": "0.1"
+  , "version": "0.0.1"
   , "main":"node-rcon.js"
-  , "description":"RCON protocol support. Provides Asyncronous support for the RCON (Remote Console) Protocol, used in various games for remote server management"
 }

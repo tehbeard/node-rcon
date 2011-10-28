@@ -34,10 +34,11 @@ this.connect = function(ip,port,password){
         });
       };
 this.sendCommand = function(command) {
-        if(!this.authed){return;}
+        if(!this.online){return {"error":'Not Online'};}
+        if(!this.authed){return {"error":'Not Authenticated'};}
         this.socket.write(this.makePacket(this.reqID,2,command));
         this.reqID +=1;
-        return this.reqID-1;
+        return {"reqID":this.reqID-1};
        };
        
 //makes a packet for RCON
