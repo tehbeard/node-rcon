@@ -53,6 +53,7 @@ this.connect = function(ip,port,password,callback){
 	if(typeof(callback)==='undefined'){callback = function(err, response){};}
         this.socket = net.createConnection(port,ip);
         this.socket.rcon = this;
+        this.socket.on('error',function(err){return callback(err);});
         this.socket.on('close',function(){this.rcon.authed=false;this.rcon.online=false});
         this.socket.on('connect',function(){
           this.rcon.online=true;
